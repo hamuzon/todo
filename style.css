@@ -231,7 +231,7 @@ main {
   background-color: #2e427a;
 }
 
-/* スマホでヘッダー内のボタンを縦並びに */
+/* スマホ時のheader：タイトルは上段、ボタンは下段で横並び */
 @media (max-width: 480px) {
   header {
     flex-direction: column;
@@ -239,15 +239,18 @@ main {
   }
 
   header h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  header button {
+    flex-grow: 0;
     width: 100%;
     margin-bottom: 0.5rem;
   }
 
-  header button:last-child {
+  header button {
+    flex: 1 1 auto;
+    width: auto;
     margin-bottom: 0;
+  }
+
+  header {
+    gap: 0.5rem;
   }
 }
