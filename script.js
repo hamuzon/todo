@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadJsonBtn = document.getElementById("load-json-btn");
   const loadInput = document.getElementById("load-json-input");
 
+  // 新規追加: 日付選択input
+  const selectDateInput = document.getElementById("select-date");
+
   function formatDateKey(date) {
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
   }
@@ -81,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalBg.hidden = false;
     todoText.focus();
+
+    // 日付選択inputも連動して値を更新
+    if (selectDateInput) {
+      selectDateInput.value = dateKey;
+    }
   }
 
   function closeModal() {
@@ -204,6 +212,16 @@ document.addEventListener("DOMContentLoaded", () => {
     todos = json.events;
     tagColors = settings.tagColors || {};
     renderTodoList();
+  }
+
+  // ページロード時に今日の日付を日付選択inputにセット
+  if (selectDateInput) {
+    selectDateInput.value = formatDateKey(new Date());
+
+    selectDateInput.onchange = () => {
+      const dateKey = selectDateInput.value;
+      if (dateKey) openModal(dateKey);
+    };
   }
 
   const stored = localStorage.getItem(STORAGE_KEY);
