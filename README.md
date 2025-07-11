@@ -1,4 +1,4 @@
-# 📝 TODOリストアプリ (Version 1.1)
+# 📝 TODOリストアプリ (Version 1.0)
 
 ---
 
@@ -52,7 +52,7 @@ todo-1.0_2025-07-11_21-30-45.json
 
 ## 公開リンク
 
-[TODOリストアプリ (Version 1.1)](https://hamuzon.github.io/todo/)
+[TODOリストアプリ](https://hamuzon.github.io/todo/)
 
 ---
 
