@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadJsonBtn = document.getElementById("load-json-btn");
   const loadInput = document.getElementById("load-json-input");
 
-  // 日付を yyyy-mm-dd 形式で返す
+  // yyyy-mm-dd形式にフォーマット
   function formatDateKey(date) {
-    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`;
   }
 
-  // 例: 2025年7月11日 表示用
+  // 表示用：2025年7月11日 みたいな形式に変換
   function formatDateJP(dateKey) {
-    const [y, m, d] = dateKey.split("-");
+    const [y,m,d] = dateKey.split("-");
     return `${y}年${parseInt(m)}月${parseInt(d)}日`;
   }
 
@@ -55,12 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       item.className = "todo-item";
 
       if (typeof todos[dateKey] === "string" && todos[dateKey].trim() !== "") {
-        const lines = todos[dateKey].split("\n").filter(line => line.trim() !== "");
-        lines.forEach(line => {
-          const div = document.createElement("div");
-          div.textContent = line;
-          item.appendChild(div);
-        });
+        // 改行も保持して表示
+        item.textContent = todos[dateKey];
       } else {
         item.textContent = "(未入力)";
         item.classList.add("empty");
@@ -85,25 +81,17 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedDate = dateKey;
     modalDate.textContent = `📅 ${formatDateJP(dateKey)}`;
 
-    // モーダル内の日付選択に反映
     todoDate.value = dateKey;
 
     const raw = todos[dateKey] || "";
-    const lines = raw.split("\n").filter(line => line.trim() !== "");
 
-    if (lines.length > 0) {
-      // 最初のTODOだけ時刻とテキスト分離して編集しやすく
-      const [time, ...rest] = lines[0].split(" ");
-      if (/^\d{2}:\d{2}$/.test(time)) {
-        todoTime.value = time;
-        todoText.value = rest.join(" ").trim();
-      } else {
-        todoTime.value = "";
-        todoText.value = lines[0];
-      }
-    } else {
+    if (raw.trim() !== "") {
+      todoText.value = raw;
+      // 時刻は任意なので、保存時に合わせて分離などしない限りはクリアでOK
       todoTime.value = "";
+    } else {
       todoText.value = "";
+      todoTime.value = "";
     }
 
     modalBg.hidden = false;
@@ -116,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedDate = null;
   }
 
-  // ➕ TODO追加ボタン
+  // 新規追加ボタン
   addBtn.onclick = () => {
     const todayKey = formatDateKey(new Date());
     openModal(todayKey);
@@ -141,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // 既存のTODOがあれば配列にして追加するなど拡張可能だが今回は上書き
+    // 時刻が入力されていれば TODOテキストの先頭に付ける（任意）
     todos[date] = time ? `${time} ${text}` : text;
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
@@ -217,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsText(file);
   };
 
-  // JSONデータから復元
+  // JSONから復元
   function loadFromJSON(json) {
     if (!json || typeof json !== "object") throw new Error("不正なJSON");
 

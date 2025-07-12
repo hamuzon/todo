@@ -1,4 +1,4 @@
-/* リセット・ベース */
+/* ベースリセット */
 * {
   box-sizing: border-box;
 }
@@ -95,9 +95,9 @@ main {
   font-size: 0.95rem;
   color: #555;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.3rem;
-  align-items: center;
+  white-space: pre-wrap;
 }
 
 .todo-item.empty {
