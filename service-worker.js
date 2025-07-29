@@ -4,8 +4,8 @@ const URLS_TO_CACHE = [
   "index.html",
   "style.css",
   "script.js",
-  "icon.svg",
-  "icon-app.png"  
+  "icon-app.png",
+  "icon.svg"
 ];
 
 // インストール時に必要ファイルをキャッシュ
@@ -34,7 +34,6 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     fetch(event.request)
       .then(response => {
-        // 正常なレスポンスならキャッシュを更新
         if (!response || response.status !== 200 || response.type !== "basic") {
           return response;
         }
