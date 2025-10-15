@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 エラーコード - Error</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --md-sys-color-background: #121212;
+      --md-sys-color-on-background: #e0e0e0;
+      --md-sys-color-surface: #1e1e1e;
+      --md-sys-color-on-surface: #e0e0e0;
+      --md-sys-color-surface-container: #1c1c1c;
+      --md-sys-color-surface-container-high: #2a2a2a;
+      --md-sys-color-primary: #6750a4;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #4f378b;
+      --md-sys-color-on-primary-container: #eaddff;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --md-sys-color-background: #f7f3e9;
+        --md-sys-color-on-background: #3b2f2f;
+        --md-sys-color-surface: #fffdf7;
+        --md-sys-color-on-surface: #3b2f2f;
+        --md-sys-color-surface-container: #f2e8d5;
+        --md-sys-color-surface-container-high: #e6dcc2;
+        --md-sys-color-primary: #6750a4;
+        --md-sys-color-on-primary: #ffffff;
+        --md-sys-color-primary-container: #eaddff;
+        --md-sys-color-on-primary-container: #1e1b1c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Potta One', sans-serif;
+    }
+
+    body {
+      background-color: var(--md-sys-color-background);
+      color: var(--md-sys-color-on-background);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+      background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 0.3em;
+      color: var(--md-sys-color-on-surface);
+      letter-spacing: 0.15em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0.3em 0;
+      color: var(--md-sys-color-on-surface-variant, #aaa);
+    }
+
+    .subtext {
+      font-size: 1rem;
+      color: var(--md-sys-color-on-surface-variant, #888);
+      margin-top: 0.5em;
+    }
+
+    a.back {
+      margin-top: 2rem;
+      padding: 0.75em 2em;
+      background-color: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    a.back:hover {
+      background-color: var(--md-sys-color-primary);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>404 - Error</h1>
+  <p>エラーが発生しました: 見つかりません</p>
+  <p class="subtext">Sorry, Not Found.</p>
+  <a id="backLink" class="back" href="/">トップページへ戻る</a>
+</body>
+</html>
