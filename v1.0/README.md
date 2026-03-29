@@ -43,12 +43,13 @@
 
 ### ファイル名例
 
-ファイル名規則
-`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
-名前例
-todo-1.0_2025-07-11_21-30-45.json
+ファイル名規則：
+`todo-[TODO_VERSION]_[YYYY]-[MM]-[DD]_[HH]-[mm]-[ss].json`
 
-この仕様により、他のv1.0対応カレンダーアプリとデータの互換性あります。
+名前例：
+`todo-1.0_2025-07-11_21-30-45.json`
+
+CalendarアプリおよびTODOアプリでの読み込み・表示に対応しています。
 
 ## 公開リンク
 
@@ -104,15 +105,15 @@ A simple and easy-to-use TODO list web app.
 
 The JSON file of this app is compatible with
 [hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
+Supports loading and displaying data in both Calendar and TODO apps.
 
 ### Example file name
 
-File name rules
-`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
-Name example
-todo-1.0_2025-07-11_21-30-45.json
+File name rules:
+`todo-[TODO_VERSION]_[YYYY]-[MM]-[DD]_[HH]-[mm]-[ss].json`
 
-This specification ensures data compatibility with other v1.0-compatible calendar apps.
+Name example:
+`todo-1.0_2025-07-11_21-30-45.json`
 
 ## Public link
 
