@@ -17,12 +17,12 @@
 
 ## ファイル構成
 
-| ファイル名      | 内容                                   |
-| -------------- | ------------------------------------ |
-| `index.html`   | アプリのHTML構造                       |
-| `style.css`    | スタイリング（ライト/ダークモード対応） |
-| `script.js`    | 機能実装（TODO管理、保存・読み込みなど） |
-| `icon.svg`     | ファビコン用アイコン（任意）           |
+| ファイル名 | 内容 |
+| --- | --- |
+| `index.html` | アプリのHTML構造 |
+| `style.css` | スタイリング（ライト/ダークモード対応） |
+| `script.js` | 機能実装（TODO管理、保存・読み込みなど） |
+| `icon.svg` | ファビコン用アイコン（任意） |
 
 ---
 
@@ -42,13 +42,13 @@
 [hamuzon/calendar GitHub リポジトリ (v1.0形式)](https://github.com/hamuzon/calendar) と互換性があります。
 
 ### ファイル名例
+
 ファイル名規則
-todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json
+`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
 名前例
 todo-1.0_2025-07-11_21-30-45.json
 
 この仕様により、他のv1.0対応カレンダーアプリとデータの互換性あります。
-
 
 ## 公開リンク
 
@@ -62,7 +62,7 @@ MIT License （自由に利用・改変可能です）
 
 ---
 
-# 📝 TODO list app (Version 1.0)
+## 📝 TODO list app (Version 1.0)
 
 ---
 
@@ -82,7 +82,7 @@ A simple and easy-to-use TODO list web app.
 ## File structure
 
 | File name | Contents |
-| -------------- | ------------------------------------ |
+| --- | --- |
 | `index.html` | HTML structure of the app |
 | `style.css` | Styling (supports light/dark mode) |
 | `script.js` | Feature implementation (TODO management, save/load, etc.) |
@@ -106,8 +106,9 @@ The JSON file of this app is compatible with
 [hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
 
 ### Example file name
+
 File name rules
-todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json
+`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
 Name example
 todo-1.0_2025-07-11_21-30-45.json
 

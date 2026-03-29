@@ -45,7 +45,7 @@
 ## JSONファイルの互換性について
 
 本アプリのJSONファイルは、  
-[hamuzon/calendar GitHub リポジトリ (v1.1形式)](https://github.com/hamuzon/calendar) と互換性があります。
+[hamuzon/calendar GitHub リポジトリ (v1.0形式)](https://github.com/hamuzon/calendar) と互換性があります。
 
 ### ファイル名例
 
@@ -68,67 +68,78 @@ MIT License （自由に利用・改変可能です）
 
 ---
 
-## 📝 TODO list app (Version 1.1)
+## 📝 To-Do List App (Version 1.1)
 
 ---
 
 ## Overview
 
-A simple and easy-to-use TODO list web app.
+A simple and easy-to-use to-do list web app.
 
 - **Manage TODOs by date**
-- **Supports TODOs with time**
+- **Supports TODOs with timestamps**
 - **Save to local storage**
-- **Can export/import with JSON file**
+- **Export/import as a JSON file**
 - **Dark mode support (automatically follows OS settings)**
 - **Accessibility support (keyboard operation, aria attribute)**
 
 ---
 
-## File structure
+## File Structure
 
-|File name|Contents|
+|Filename|Content|
 |---|---|
-|`index.html`|HTML structure of the app|
-|`style.css`|Styling (supports light/dark mode)|
-|`script.js`|Feature implementation (TODO management, save/load, etc.)|
+|`index.html`|App's HTML structure|
+|`style.css`|Styling (Light/Dark mode support)|
+|`script.js`|Function implementation (TODO management, save/load, etc.)|
 |`icon.svg`|Favicon icon (optional)|
 
 ---
 
-## How to use
+## Changes in v1.1
 
-1. Click the "➕ Add TODO" button to add a TODO for today's date.
-2. Click the date block to open the editing modal.
-3. Enter the time (optional) and content, and click "💾 Save" to register.
-4. Click the "💾 Save" button to save to a JSON format file.
-5. Click the "📂 Load" button to load the JSON file and restore the TODO.
+- **Automatic addition/editing of existing TODOs**: When the "Add" button is pressed, if there are already TODOs for that day, the content is automatically loaded, allowing for smooth addition and editing.
+
+- **Date Change Merging**: When you change the date and save within the modal, existing data for the destination date will now be automatically appended to the end.
+
+- **Improved Compatibility**: Added support for reading v1.0 format JSON files.
+
+## How to Use
+
+1. Click the "➕ Add TODO" button to add a TODO for today's date. Existing content will be displayed automatically.
+
+2. Clicking the date block opens the edit modal.
+
+3. Enter the time (optional) and content, then click "💾 Save" to register.
+
+4. Export to a JSON file using the "💾 Save" button (bottom).
+
+5. Load the JSON file using the "📂 Load" button to restore the TODO.
 
 ---
 
-## About JSON file compatibility
+## JSON File Compatibility
 
-The JSON file of this app is compatible with
-[hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
+This application's JSON files are compatible with the [hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
 
-### Example file name
+### Example File Names
 
-File name rules
+File Name Convention
 `todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
-Name example
-todo-1.0_2025-07-11_21-30-45.json
+Example Name
+todo-1.1_2025-07-11_21-30-45.json
 
-This specification ensures data compatibility with other v1.0-compatible calendar apps.
+This specification ensures data compatibility with other v1.0 compatible calendar apps.
 
-## Public link
+## Public Link
 
-[TODO list app](https://hamuzon.github.io/todo/)
+[TODO List App](https://hamuzon.github.io/todo/)
 
 ---
 
 ## License
 
-MIT License (free to use and modify)
+MIT License (Free to use and modify)
 
 ---
 Translated by Google Translate
