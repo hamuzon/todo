@@ -42,11 +42,6 @@
 
 ---
 
-## JSONファイルの互換性について
-
-本アプリのJSONファイルは、  
-[hamuzon/calendar GitHub リポジトリ (v1.0形式)](https://github.com/hamuzon/calendar) と互換性があります。
-
 ### ファイル名例
 
 ファイル名規則
@@ -117,10 +112,6 @@ A simple and easy-to-use to-do list web app.
 5. Load the JSON file using the "📂 Load" button to restore the TODO.
 
 ---
-
-## JSON File Compatibility
-
-This application's JSON files are compatible with the [hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
 
 ### Example File Names
 
