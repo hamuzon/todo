@@ -1,4 +1,4 @@
-# 📝 TODOリストアプリ (Version 1.1)
+# 📝 TODOリストアプリ (Version 1.0)
 
 ---
 
@@ -17,27 +17,21 @@
 
 ## ファイル構成
 
-|ファイル名|内容|
-|---|---|
-|`index.html`|アプリのHTML構造|
-|`style.css`|スタイリング（ライト/ダークモード対応）|
-|`script.js`|機能実装（TODO管理、保存・読み込みなど）|
-|`icon.svg`|ファビコン用アイコン（任意）|
+| ファイル名      | 内容                                   |
+| -------------- | ------------------------------------ |
+| `index.html`   | アプリのHTML構造                       |
+| `style.css`    | スタイリング（ライト/ダークモード対応） |
+| `script.js`    | 機能実装（TODO管理、保存・読み込みなど） |
+| `icon.svg`     | ファビコン用アイコン（任意）           |
 
 ---
 
-## v1.1 での変更点
-
-- **既存TODOへの自動追記・編集**: 「追加」ボタン押下時にその日のTODOが既にある場合、内容を自動的に読み込み、追記や編集がスムーズに行えるようになりました。
-- **日付変更時のマージ**: モーダル内で日付を変更して保存した際、移動先の日付に既存データがあれば自動的に末尾に追記（アペンド）されるようになりました。
-- **互換性の向上**: v1.0形式のJSONファイルの読み込みをサポートしました。
-
 ## 使い方
 
-1. 「➕ TODO追加」ボタンをクリックして、今日の日付のTODOを追加。既存の内容があれば自動で表示されます。
+1. 「➕ TODO追加」ボタンをクリックして、今日の日付のTODOを追加。  
 2. 日付ブロックをクリックすると編集モーダルが開きます。  
 3. 時刻（任意）と内容を入力し、「💾 保存」で登録。  
-4. 「💾 保存」ボタン（下部）でJSON形式ファイルにエクスポート。
+4. 「💾 保存」ボタンでJSON形式ファイルに保存。  
 5. 「📂 読込」ボタンでJSONファイルを読み込み、TODOを復元。  
 
 ---
@@ -45,16 +39,16 @@
 ## JSONファイルの互換性について
 
 本アプリのJSONファイルは、  
-[hamuzon/calendar GitHub リポジトリ (v1.1形式)](https://github.com/hamuzon/calendar) と互換性があります。
+[hamuzon/calendar GitHub リポジトリ (v1.0形式)](https://github.com/hamuzon/calendar) と互換性があります。
 
 ### ファイル名例
-
 ファイル名規則
-`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
+todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json
 名前例
-todo-1.1_2025-07-11_21-30-45.json
+todo-1.0_2025-07-11_21-30-45.json
 
 この仕様により、他のv1.0対応カレンダーアプリとデータの互換性あります。
+
 
 ## 公開リンク
 
@@ -68,7 +62,7 @@ MIT License （自由に利用・改変可能です）
 
 ---
 
-## 📝 TODO list app (Version 1.1)
+# 📝 TODO list app (Version 1.0)
 
 ---
 
@@ -87,12 +81,12 @@ A simple and easy-to-use TODO list web app.
 
 ## File structure
 
-|File name|Contents|
-|---|---|
-|`index.html`|HTML structure of the app|
-|`style.css`|Styling (supports light/dark mode)|
-|`script.js`|Feature implementation (TODO management, save/load, etc.)|
-|`icon.svg`|Favicon icon (optional)|
+| File name | Contents |
+| -------------- | ------------------------------------ |
+| `index.html` | HTML structure of the app |
+| `style.css` | Styling (supports light/dark mode) |
+| `script.js` | Feature implementation (TODO management, save/load, etc.) |
+| `icon.svg` | Favicon icon (optional) |
 
 ---
 
@@ -112,9 +106,8 @@ The JSON file of this app is compatible with
 [hamuzon/calendar GitHub repository (v1.0 format)](https://github.com/hamuzon/calendar).
 
 ### Example file name
-
 File name rules
-`todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json`
+todo-[TODO_VERSION][YYYY]-[MM]-[DD][HH]-[mm]-[ss].json
 Name example
 todo-1.0_2025-07-11_21-30-45.json
 
