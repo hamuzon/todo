@@ -2,7 +2,7 @@
 
 const TODO_VERSION = "1.1";
 const SUPPORTED_VERSIONS = ["1.0", "1.1"];
-const STORAGE_KEY = "todo_events";
+const STORAGE_KEY = "todo_events_V1.1";
 
 let todos = {};
 let tagColors = {};
