@@ -5,17 +5,17 @@
 
 body {
   font-family: "Yu Gothic", "Segoe UI", Tahoma, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #fdf6e3;
+  color: #333;
   margin: 0;
   padding: 1rem;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #0f172a;
-    color: #f1f5f9;
+    background-color: #1a1a1a;
+    color: #eee;
   }
 }
 
@@ -34,30 +34,19 @@ header h1 {
 
 button {
   cursor: pointer;
-  background-color: #3b82f6;
+  background-color: #4c6cb3;
   border: none;
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #2563eb;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-button:active {
-  transform: translateY(0);
-}
-
+button:hover,
 button:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+  background-color: #3a53a1;
+  outline: none;
 }
 
 button:disabled {
@@ -77,31 +66,24 @@ main {
 }
 
 .todo-date-block {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background-color: #fff8dc;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.3s, border-color 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  gap: 0.3rem;
 }
 
+.todo-date-block:focus,
 .todo-date-block:hover {
-  background-color: #fff;
-  border-color: #3b82f6;
-  transform: scale(1.02);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.todo-date-block:focus {
-  outline: 2px solid #3b82f6;
-  background-color: #fff;
+  background-color: #dce4f7;
+  border-color: #4c6cb3;
+  outline: none;
 }
 
 .todo-date-block h4 {
@@ -127,41 +109,22 @@ main {
 /* ダークモード */
 @media (prefers-color-scheme: dark) {
   .todo-date-block {
-    background: rgba(30, 41, 59, 0.7);
-    border-color: #334155;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    background-color: #2a2a2a;
+    border-color: #555;
   }
+  .todo-date-block:focus,
   .todo-date-block:hover {
-    background-color: #1e293b;
-    border-color: #60a5fa;
+    background-color: #3f4a8a;
+    border-color: #7a8fd0;
   }
   .todo-date-block h4 {
-    color: #60a5fa;
+    color: #a3b1ff;
   }
   .todo-item {
-    color: #cbd5e1;
+    color: #ccc;
   }
   .todo-item.empty {
-    color: #475569;
-  }
-}
-
-.empty-msg {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 3rem 1rem;
-  color: #64748b;
-  font-style: italic;
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
-  border: 2px dashed #e2e8f0;
-}
-
-@media (prefers-color-scheme: dark) {
-  .empty-msg {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: #334155;
-    color: #94a3b8;
+    color: #666;
   }
 }
 

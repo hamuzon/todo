@@ -49,10 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     listContainer.innerHTML = "";
     const keys = Object.keys(todos).sort();
 
-    if (keys.length === 0) {
-      listContainer.innerHTML = "<p class='empty-msg'>TODOがありません。「➕追加」で作成しましょう！</p>";
-    }
-
     keys.forEach(dateKey => {
       const block = document.createElement("div");
       block.className = "todo-date-block";
